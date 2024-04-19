@@ -26,6 +26,9 @@ h1 {
 .interestsClass { 
 	align: center;
 	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 .rightJustified {
