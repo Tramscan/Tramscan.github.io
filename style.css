@@ -5,7 +5,13 @@ h2 { font-family: inter }
 h3 { font-family: inter }
 h4 { font-family: inter }
 a { font-family: inter }
-body { font-family: inter }
+body { 
+font-family: inter
+margin-top: 0px
+margin-right: 0px
+margin-bottom: 0px
+margin-left: 0px
+}
 
 .rightJustified {
 text-align: right;
