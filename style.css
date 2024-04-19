@@ -24,6 +24,8 @@ h1 {
 
 .blogHeader {
 	align: center;
+	background-color: black;
+	color: white;
 	text-align: center;
 	margin: 0;
 	padding: 50px;
@@ -31,12 +33,16 @@ h1 {
 
 .blogPost {
 	text-align: left;
+	background-color: black;
+	color: white;
 	margin: 0;
 	padding: 20px;
 }
 
 .blogTitle {
 	text-align: center;
+	background-color: black;
+	color: white;
 	margin: 0;
 	padding: 20px;
 }
