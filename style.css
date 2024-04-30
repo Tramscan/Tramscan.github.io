@@ -4,7 +4,8 @@ h1 { font-family: inter; }
 h2 { font-family: inter; }
 h3 { font-family: inter; }
 h4 { font-family: inter; }
-a { font-family: inter; }
+a { font-family: inter;
+    text-decoration: none;}
 body { 
 font-family: inter;
 margin-top: 0px;
@@ -12,6 +13,11 @@ margin-right: 0px;
 margin-bottom: 0px;
 margin-left: 0px;
 }
+.container { width: 80%; margin: 20px auto; }
+header, article { margin-bottom: 20px; }
+article { border-bottom: 1px solid #ccc; padding-bottom: 20px; }
+a { text-decoration: none; color: white;}
+a:hover { text-decoration: underline; }
 div {
 padding: 15px;
 background-color: black;
