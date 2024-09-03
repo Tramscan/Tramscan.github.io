@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <style>
         #pendulum-program, #three-body-program {
-            width: 400px;
+            width: 600px;
             margin: 20px auto;
             text-align: center;
         }
@@ -31,6 +31,25 @@
             flex-direction: column;
             align-items: center;
         }
+        .home-link {
+            position: fixed;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .home-link:hover {
+            background-color: #555;
+        }
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -45,9 +64,9 @@
         
         <!-- Pendulum Simulation -->
         <div class="project-box">
-            <h2 class="project-title">Pendulum Simulation</h2>
+            <h2 class="project-title">Double Pendulum Simulation</h2>
             <div id="pendulum-program">
-                <canvas id="pendulum-canvas" width="400" height="400"></canvas>
+                <canvas id="pendulum-canvas" width="600" height="600"></canvas>
                 <div class="project-controls">
                     <button id="pendulum-start">Start</button>
                     <button id="pendulum-pause">Pause</button>
@@ -60,7 +79,7 @@
         <div class="project-box">
             <h2 class="project-title">Three-Body Gravity System</h2>
             <div id="three-body-program">
-                <canvas id="three-body-canvas" width="400" height="400"></canvas>
+                <canvas id="three-body-canvas" width="600" height="600"></canvas>
                 <div class="project-controls">
                     <button id="three-body-start">Start</button>
                     <button id="three-body-pause">Pause</button>
@@ -83,6 +102,10 @@
             </div>
         </div>
     </div>
+
+    <!-- Home links -->
+    <a href="../index.html" class="home-link top-right">Home</a>
+    <a href="../index.html" class="home-link bottom-right">Home</a>
 
     <script src="pendulum/pendulum.js"></script>
     <script src="three-body/three-body.js"></script>
