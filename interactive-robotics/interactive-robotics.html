@@ -21,19 +21,29 @@
             top: 0;
             left: 0;
         }
-        #pendulum-program {
+        #pendulum-program, #three-body-program {
             width: 400px;
             margin: 20px auto;
             text-align: center;
         }
-        #pendulum-canvas {
-            background-color: #333; /* Match the grey box color */
-            border: none; /* Remove border */
-            border-radius: 15px; /* Round the corners */
+        #pendulum-canvas, #three-body-canvas {
+            background-color: #333;
+            border: none;
+            border-radius: 15px;
             margin-bottom: 10px;
         }
-        .pendulum-controls button {
+        .project-controls button {
             margin: 0 5px;
+        }
+        .mass-sliders {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .mass-slider {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
@@ -41,6 +51,7 @@
     <div class="container">
         <h1>Interactive Robotics Projects</h1>
         
+        <!-- Counter Program -->
         <div class="project-box">
             <h2 class="project-title">Counter Program</h2>
             <div id="counter-program">
@@ -48,14 +59,42 @@
             </div>
         </div>
         
+        <!-- Pendulum Simulation -->
         <div class="project-box">
             <h2 class="project-title">Pendulum Simulation</h2>
             <div id="pendulum-program">
                 <canvas id="pendulum-canvas" width="400" height="400"></canvas>
-                <div class="pendulum-controls">
+                <div class="project-controls">
                     <button id="pendulum-start">Start</button>
                     <button id="pendulum-pause">Pause</button>
                     <button id="pendulum-reset">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Three-Body System -->
+        <div class="project-box">
+            <h2 class="project-title">Three-Body Gravity System</h2>
+            <div id="three-body-program">
+                <canvas id="three-body-canvas" width="400" height="400"></canvas>
+                <div class="project-controls">
+                    <button id="three-body-start">Start</button>
+                    <button id="three-body-pause">Pause</button>
+                    <button id="three-body-reset">Reset</button>
+                </div>
+                <div class="mass-sliders">
+                    <div class="mass-slider">
+                        <label for="mass1">Red Mass</label>
+                        <input type="range" id="mass1" min="100" max="2000" value="1000">
+                    </div>
+                    <div class="mass-slider">
+                        <label for="mass2">Green Mass</label>
+                        <input type="range" id="mass2" min="100" max="2000" value="1000">
+                    </div>
+                    <div class="mass-slider">
+                        <label for="mass3">Blue Mass</label>
+                        <input type="range" id="mass3" min="100" max="2000" value="1000">
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,9 +111,11 @@
         run();
     </script>
     <script src="pendulum/pendulum.js"></script>
+    <script src="three-body/three-body.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             setupPendulum('pendulum-canvas', 'pendulum-start', 'pendulum-pause', 'pendulum-reset');
+            setupThreeBodySystem('three-body-canvas', 'three-body-start', 'three-body-pause', 'three-body-reset', ['mass1', 'mass2', 'mass3']);
         });
     </script>
 </body>
