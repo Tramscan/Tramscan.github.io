@@ -1,0 +1,10 @@
+/home/nick/cursor/projects/website-redux/interactive-robotics/counter/target/wasm32-unknown-unknown/release/deps/libowned_ttf_parser-a3520ea584ebe300.rmeta: /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/lib.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/convert.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/owned.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/preparse.rs
+
+/home/nick/cursor/projects/website-redux/interactive-robotics/counter/target/wasm32-unknown-unknown/release/deps/libowned_ttf_parser-a3520ea584ebe300.rlib: /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/lib.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/convert.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/owned.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/preparse.rs
+
+/home/nick/cursor/projects/website-redux/interactive-robotics/counter/target/wasm32-unknown-unknown/release/deps/owned_ttf_parser-a3520ea584ebe300.d: /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/lib.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/convert.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/owned.rs /home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/preparse.rs
+
+/home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/lib.rs:
+/home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/convert.rs:
+/home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/owned.rs:
+/home/nick/.cargo/registry/src/index.crates.io-6f17d22bba15001f/owned_ttf_parser-0.24.0/src/preparse.rs:

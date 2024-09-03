@@ -1,4 +1,3 @@
-
 @font-face {font-family: inter; src: url('fonts/Inter/Inter-VariableFont_slnt,wght.ttf');}
 h1 { font-family: inter; }
 h2 { font-family: inter; }
@@ -12,8 +11,16 @@ margin-top: 0px;
 margin-right: 0px;
 margin-bottom: 0px;
 margin-left: 0px;
+background-color: black;
+color: white;
+margin: 0;
+padding: 0;
 }
-.container { width: 80%; margin: 20px auto; }
+.container { 
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
 header, article { margin-bottom: 20px; }
 article { border-bottom: 1px solid #ccc; padding-bottom: 20px; }
 a { text-decoration: none; color: white;}
@@ -69,4 +76,20 @@ text-align: left;
 }
 .centerJustified {
 text-align: center;
+}
+
+.eframe-close-button, .eframe-toolbar {
+    display: none !important;
+}
+
+/* Add these rules at the end of your style.css file */
+.eframe-close-button, 
+.eframe-toolbar,
+.eframe-titlebar {
+    display: none !important;
+}
+
+#counter-canvas {
+    border: none !important;
+    outline: none !important;
 }

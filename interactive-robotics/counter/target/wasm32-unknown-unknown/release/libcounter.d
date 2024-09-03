@@ -1,0 +1,1 @@
+/home/nick/cursor/projects/website-redux/interactive-robotics/counter/target/wasm32-unknown-unknown/release/libcounter.rlib: /home/nick/cursor/projects/website-redux/interactive-robotics/counter/src/lib.rs
