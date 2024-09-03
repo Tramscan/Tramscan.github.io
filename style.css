@@ -29,7 +29,7 @@ h1 {
 }
 
 .blogHeader {
-	align: center;
+	text-align: center;
 	background-color: black;
 	color: white;
 	text-align: center;
@@ -54,7 +54,7 @@ h1 {
 }
 
 .interestsClass { 
-	align: center;
+	text-align: center;
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
