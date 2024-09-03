@@ -93,3 +93,58 @@ text-align: center;
     border: none !important;
     outline: none !important;
 }
+
+/* Add these new styles to your existing style.css */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title, .page-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.image-container img {
+    margin: 0 10px;
+}
+
+.link-box {
+    background-color: #333; /* Dark grey background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 600px; /* Adjust as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white; /* Ensure the title is visible on dark background */
+}
+
+.link-box a, .link-box p {
+    display: block;
+    text-align: center;
+    color: white; /* Ensure links and text are visible on dark background */
+}
+
+.link-box a:hover {
+    color: #ddd; /* Lighter color on hover for better user feedback */
+}
+
+.interestsClass {
+    display: block;
+    margin: 0 auto;
+}
