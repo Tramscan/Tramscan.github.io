@@ -8,9 +8,11 @@ class Pendulum {
         this.length = 200;
         this.origin = { x: canvas.width / 2, y: 50 };
         this.bob = { x: 0, y: 0 };
+        this.isRunning = false;
     }
 
     update() {
+        if (!this.isRunning) return;
         const gravity = 0.5;
         this.angleAcceleration = (-gravity / this.length) * Math.sin(this.angle);
         this.angleVelocity += this.angleAcceleration;
@@ -36,6 +38,34 @@ class Pendulum {
         this.draw();
         requestAnimationFrame(() => this.animate());
     }
+
+    start() {
+        this.isRunning = true;
+    }
+
+    pause() {
+        this.isRunning = false;
+    }
+
+    reset() {
+        this.angle = Math.PI / 4;
+        this.angleVelocity = 0;
+        this.angleAcceleration = 0;
+        this.bob.x = this.origin.x + this.length * Math.sin(this.angle);
+        this.bob.y = this.origin.y + this.length * Math.cos(this.angle);
+        this.draw();
+    }
+}
+
+function setupPendulum(canvasId, startId, pauseId, resetId) {
+    const canvas = document.getElementById(canvasId);
+    const pendulum = new Pendulum(canvas);
+    pendulum.reset();
+    pendulum.animate();
+
+    document.getElementById(startId).addEventListener('click', () => pendulum.start());
+    document.getElementById(pauseId).addEventListener('click', () => pendulum.pause());
+    document.getElementById(resetId).addEventListener('click', () => pendulum.reset());
 }
 
 document.addEventListener('DOMContentLoaded', () => {

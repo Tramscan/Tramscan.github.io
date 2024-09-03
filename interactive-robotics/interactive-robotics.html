@@ -21,6 +21,18 @@
             top: 0;
             left: 0;
         }
+        #pendulum-program {
+            width: 400px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        #pendulum-canvas {
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        .pendulum-controls button {
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +48,14 @@
         
         <div class="project-box">
             <h2 class="project-title">Pendulum Simulation</h2>
-            <p><a href="pendulum/index.html">View Pendulum Simulation</a></p>
+            <div id="pendulum-program">
+                <canvas id="pendulum-canvas" width="400" height="400"></canvas>
+                <div class="pendulum-controls">
+                    <button id="pendulum-start">Start</button>
+                    <button id="pendulum-pause">Pause</button>
+                    <button id="pendulum-reset">Reset</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -49,6 +68,12 @@
         }
         
         run();
+    </script>
+    <script src="pendulum/pendulum.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setupPendulum('pendulum-canvas', 'pendulum-start', 'pendulum-pause', 'pendulum-reset');
+        });
     </script>
 </body>
 </html>
