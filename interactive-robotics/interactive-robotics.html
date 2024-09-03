@@ -26,10 +26,20 @@
 <body>
     <div class="container">
         <h1>Interactive Robotics Projects</h1>
-        <div id="counter-program">
-            <canvas id="counter-canvas"></canvas>
+        
+        <div class="project-box">
+            <h2 class="project-title">Counter Program</h2>
+            <div id="counter-program">
+                <canvas id="counter-canvas"></canvas>
+            </div>
+        </div>
+        
+        <div class="project-box">
+            <h2 class="project-title">Pendulum Simulation</h2>
+            <p><a href="pendulum/index.html">View Pendulum Simulation</a></p>
         </div>
     </div>
+
     <script type="module">
         import init, { start } from './counter/pkg/counter.js';
         
