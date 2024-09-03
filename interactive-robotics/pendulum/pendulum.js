@@ -5,8 +5,8 @@ class Pendulum {
         this.angle = Math.PI / 4;
         this.angleVelocity = 0;
         this.angleAcceleration = 0;
-        this.length = 200;
-        this.origin = { x: canvas.width / 2, y: 50 };
+        this.length = 180; // Slightly shorter to fit better in rounded corners
+        this.origin = { x: canvas.width / 2, y: 70 }; // Move origin down a bit
         this.bob = { x: 0, y: 0 };
         this.isRunning = false;
     }
@@ -24,12 +24,25 @@ class Pendulum {
 
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Draw pendulum arm (white)
         this.ctx.beginPath();
         this.ctx.moveTo(this.origin.x, this.origin.y);
         this.ctx.lineTo(this.bob.x, this.bob.y);
+        this.ctx.strokeStyle = 'white';
+        this.ctx.lineWidth = 2;
         this.ctx.stroke();
+        
+        // Draw base (white circle)
         this.ctx.beginPath();
-        this.ctx.arc(this.bob.x, this.bob.y, 20, 0, 2 * Math.PI);
+        this.ctx.arc(this.origin.x, this.origin.y, 5, 0, 2 * Math.PI);
+        this.ctx.fillStyle = 'white';
+        this.ctx.fill();
+        
+        // Draw bob (maroon circle)
+        this.ctx.beginPath();
+        this.ctx.arc(this.bob.x, this.bob.y, 15, 0, 2 * Math.PI);
+        this.ctx.fillStyle = 'maroon';
         this.ctx.fill();
     }
 
@@ -53,6 +66,7 @@ class Pendulum {
         this.angleAcceleration = 0;
         this.bob.x = this.origin.x + this.length * Math.sin(this.angle);
         this.bob.y = this.origin.y + this.length * Math.cos(this.angle);
+        this.isRunning = false;
         this.draw();
     }
 }
