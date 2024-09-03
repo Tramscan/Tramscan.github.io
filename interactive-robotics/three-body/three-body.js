@@ -2,13 +2,17 @@ class ThreeBodySystem {
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
+        this.width = canvas.width;
+        this.height = canvas.height;
         this.bodies = [
-            { x: 200, y: 200, vx: 0, vy: 1, mass: 1000, color: 'red' },
-            { x: 300, y: 300, vx: 0, vy: -1, mass: 1000, color: 'green' },
-            { x: 100, y: 100, vx: 0, vy: 0, mass: 1000, color: 'blue' }
+            { x: this.width * 0.4, y: this.height * 0.4, vx: 0, vy: 1, mass: 1000, color: 'red' },
+            { x: this.width * 0.6, y: this.height * 0.6, vx: 0, vy: -1, mass: 1000, color: 'green' },
+            { x: this.width * 0.5, y: this.height * 0.5, vx: 0, vy: 0, mass: 1000, color: 'blue' }
         ];
         this.isRunning = false;
-        this.G = 0.1; // Gravitational constant (adjusted for simulation)
+        this.G = 0.1;
+        this.trails = [[], [], []];
+        this.trailLength = 200;
     }
 
     update() {
@@ -31,11 +35,35 @@ class ThreeBodySystem {
             this.bodies[i].vy += ay;
             this.bodies[i].x += this.bodies[i].vx;
             this.bodies[i].y += this.bodies[i].vy;
+
+            // Add current position to trail
+            this.trails[i].push({x: this.bodies[i].x, y: this.bodies[i].y});
+            if (this.trails[i].length > this.trailLength) {
+                this.trails[i].shift();
+            }
         }
     }
 
     draw() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.ctx.clearRect(0, 0, this.width, this.height);
+
+        // Draw trails
+        this.trails.forEach((trail, index) => {
+            this.ctx.beginPath();
+            trail.forEach((point, i) => {
+                if (i === 0) {
+                    this.ctx.moveTo(point.x, point.y);
+                } else {
+                    this.ctx.lineTo(point.x, point.y);
+                }
+            });
+            this.ctx.strokeStyle = this.bodies[index].color;
+            this.ctx.globalAlpha = 0.3;
+            this.ctx.stroke();
+            this.ctx.globalAlpha = 1;
+        });
+
+        // Draw bodies
         for (let body of this.bodies) {
             this.ctx.beginPath();
             this.ctx.arc(body.x, body.y, Math.sqrt(body.mass) / 2, 0, 2 * Math.PI);
@@ -60,10 +88,11 @@ class ThreeBodySystem {
 
     reset() {
         this.bodies = [
-            { x: 200, y: 200, vx: 0, vy: 1, mass: 1000, color: 'red' },
-            { x: 300, y: 300, vx: 0, vy: -1, mass: 1000, color: 'green' },
-            { x: 100, y: 100, vx: 0, vy: 0, mass: 1000, color: 'blue' }
+            { x: this.width * 0.4, y: this.height * 0.4, vx: 0, vy: 1, mass: 1000, color: 'red' },
+            { x: this.width * 0.6, y: this.height * 0.6, vx: 0, vy: -1, mass: 1000, color: 'green' },
+            { x: this.width * 0.5, y: this.height * 0.5, vx: 0, vy: 0, mass: 1000, color: 'blue' }
         ];
+        this.trails = [[], [], []];
         this.isRunning = false;
         this.draw();
     }
