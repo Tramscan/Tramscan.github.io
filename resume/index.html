@@ -1,19 +1,22 @@
+---
+permalink: /resume/
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nick's Resume</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/shared.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
         #resume-container {
             width: 100%;
             height: 80vh;
             margin-bottom: 20px;
         }
-        #resume-iframe {
+        #resume-object {
             width: 100%;
             height: 100%;
             border: none;
@@ -31,7 +34,10 @@
         <h1>Nick's Resume</h1>
         
         <div id="resume-container">
-            <iframe id="resume-iframe" src="https://docs.google.com/viewer?url=https://github.com/Tramscan/resume/raw/pdf-branch/NickClineResume.pdf&embedded=true"></iframe>
+            <object id="resume-object" data="https://github.com/Tramscan/resume/raw/pdf-branch/NickClineResume.pdf" type="application/pdf">
+                <p>It appears you don't have a PDF plugin for this browser. 
+                No worries, you can <a href="https://github.com/Tramscan/resume/raw/pdf-branch/NickClineResume.pdf">click here to download the PDF file.</a></p>
+            </object>
         </div>
 
         <a href="https://github.com/Tramscan/resume/raw/pdf-branch/NickClineResume.pdf" class="download-link" download>Download PDF</a>
@@ -39,16 +45,7 @@
     </div>
 
     <!-- Home links -->
-    <a href="../index.html" class="home-link top-right">Home</a>
-    <a href="../index.html" class="home-link bottom-right">Home</a>
-
-    <script>
-        // This script reloads the iframe if it fails to load
-        document.getElementById('resume-iframe').onload = function() {
-            if(this.contentDocument.body.innerText.includes('Not Found')) {
-                this.src = this.src;
-            }
-        }
-    </script>
+    <a href="/" class="home-link top-right">Home</a>
+    <a href="/" class="home-link bottom-right">Home</a>
 </body>
 </html>
