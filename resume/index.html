@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick's Resume</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../shared.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style>
+        #resume-container {
+            width: 100%;
+            height: 80vh;
+            margin-bottom: 20px;
+        }
+        #resume-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .download-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nick's Resume</h1>
+        
+        <div id="resume-container">
+            <iframe id="resume-iframe" src="https://docs.google.com/viewer?url=https://github.com/Tramscan/resume/raw/main/NickClineResume.pdf&embedded=true"></iframe>
+        </div>
+
+        <a href="https://github.com/Tramscan/resume/raw/main/NickClineResume.pdf" class="download-link" download>Download PDF</a>
+
+    </div>
+
+    <!-- Home links -->
+    <a href="../index.html" class="home-link top-right">Home</a>
+    <a href="../index.html" class="home-link bottom-right">Home</a>
+
+    <script>
+        // This script reloads the iframe if it fails to load
+        document.getElementById('resume-iframe').onload = function() {
+            if(this.contentDocument.body.innerText.includes('Not Found')) {
+                this.src = this.src;
+            }
+        }
+    </script>
+</body>
+</html>
