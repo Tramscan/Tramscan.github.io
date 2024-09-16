@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bipedal Robot Simulation - Nick's Portfolio</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="portfolio-styles.css">
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/shared.css">
+    <link rel="stylesheet" href="/portfolio/portfolio-styles.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-urdf@0.3.3/build/three-urdf.min.js"></script>
+    <style>
+        #urdf-viewer {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,8 +24,8 @@
         
         <div class="portfolio-item">
             <p class="timeframe">October 2023 - Present</p>
-            <img src="../pics/biped-robot.jpg" alt="Bipedal Robot Simulation" class="project-image">
-            <p class="image-caption">Visualization of the Bipedal Robot Simulation</p>
+            <div id="urdf-viewer"></div>
+            <p class="image-caption">Interactive 3D model of the Bipedal Robot</p>
             <h2>Project Overview</h2>
             <p>The Bipedal Robot Simulation project focuses on creating a comprehensive model of a bipedal robot in Gazebo. This project aims to explore the complexities of bipedal locomotion and develop advanced control strategies for humanoid robots.</p>
             <h2>Technical Details</h2>
@@ -33,7 +42,19 @@
     </div>
 
     <!-- Home links -->
-    <a href="../index.html" class="home-link top-right">Home</a>
-    <a href="../index.html" class="home-link bottom-right">Home</a>
+    <a href="/" class="home-link top-right">Home</a>
+    <a href="/" class="home-link bottom-right">Home</a>
+
+    <script>
+        const viewer = new URDFViewer({
+            element: document.querySelector('#urdf-viewer'),
+            urdf: '### INSERT YOUR GITHUB LINK TO THE BIPEDAL ROBOT URDF/SDF FILE HERE ###',
+            loadMeshCb: (path, manager, done) => {
+                // Load meshes from your GitHub repository
+                const githubPath = '### INSERT YOUR GITHUB RAW CONTENT BASE URL HERE ###';
+                return done(githubPath + path);
+            }
+        });
+    </script>
 </body>
 </html>
