@@ -18,10 +18,22 @@
             <img src="../pics/gearbox-prototype.jpg" alt="Gearbox Prototype" class="project-image">
             <p class="image-caption">Prototype of a cycloidal gearbox</p>
             <h2>Project Overview</h2>
-            <p>This project involves the design and prototyping of cycloidal and planetary gearboxes for use with brushless DC motors. The goal is to develop high-performance, compact gearboxes suitable for robotic applications.</p>
-            <h2>Technical Details</h2>
-            <p>Key aspects of the project include:</p>
-            <ul>
+            <p>As a requirement of a future bipedal robot build, I had issues with the cost of certain motors and a lack of a cheaper counterpart. To remedy this, I created several 3D printed prototypes of various gearbox styles that would attach to inexpensive, small high speed brushless motors. </p>
+            <h2>A Need For Gear Reduction</h2>
+            <p>Loosely inspired by brushless motors with internal gear reduction, I figured that I could design and 3d print a gearbox small enough to fit with a small drone motor to reduce speed, increase precision of position control, and be light enough to use as an alternative to larger, more expensive motors for robotics projects. At first, I experimented with a simple planetary gearbox with 3 planet gears, printed out of ABS. This doubled as a crash course in 3D printing as I was using an older Zortrax m200 that had various issues with the build plate heater, poor extrusion, slow acceleration and speed, a proprietary slicing software, and so on. The build plate heat was especially difficult to deal with, as heat retention and warping were serious issues with most large, flat prints, and I didn't have many ways of dealing with this issue other than designing around it or putting cardboard around the printer to try and retain some of the heat in the build volume. I printed in ABS until I ran out, which was a blessing in disguise because it really wasn't necessary for my application.
+
+</p>
+            <h2>Material Selection and Design Complications</h2>
+            <p>Eventually I changed to another material which is what I assume to be TPU with some glass filler, z-glass. I had a few gearboxes that exploded due to friction and tight assembly, and z-glass was stronger and more compliant which meant that the gearbox would probably only explode as a result of poor assembly design. As I continued to test the gearboxes, assembly and design errors became more apparent. Gears would float too far up and down, if the print was too tight there would be too much friction load for the motor to start moving, and my reluctance to use any hardware other than screws and heat set inserts made it difficult to modify and test new revisions without waiting hours for a print to finish (if at all)
+
+</p>
+            <h2>Advancement and Upgrades</h2>
+            <p>The final gearbox that was printed was an odd one, as the 12:1 reduction ratio was still too fast. I created a stackable planetary gearbox using very thin gears, and attempted to assemble three of them on top of each other. After running into more FDM-related issues and assembly misalignment, I made a poor financial decision and bought a Formlabs Form 2. I only used it a few times, but it certainly printed a lot better than the M200 for my use case. I could print clean herringbone gears and print times were much faster as I could pack thin parts on the build plate and print them all at once. No more warping issues, just new issues with print fails and a dirty mirror causing blurry features on the bottom left of the build area. After a little while I ended up buying an Elegoo Saturn 2, which was finally the reliable, high quality printer I needed to print these small parts. I started to look for simpler ways of achieving the same gear ratio and printed a belt-driven reducer, which was cool at first, and from a height perspective wasn't too different from the previous gearboxes, but this was still too big if it were to fit inside a box and be used for a robotics project.
+
+</p>
+            <h2>Optimized Design and Future Applications</h2>
+            <p>Eventually I settled on cycloidal gearboxes, which had low backlash and huge reduction ratios for their size. I would say this was probably the most successful design, but the hardest to get right and assemble. I still ran into gear float issues and friction issues, but if assembled correctly this would have worked. The issue lied with the assembly, as I tried to make this gearbox too small, where the shaft is fastened with extremely small #00 screws. Eventually this was the tipping point to convince me that I should probably just buy the more expensive motors and put one simple gear reducer on it, if at all. In the pursuit of getting a $6 motor to have fine motor control instead of buying a $75 motor, I gained a lot of good skills for prototyping and design which I use frequently in my work today. I did end up buying the motors, and have a separate project to compare the differences between a knockoff and the original. I may not have learned my lesson, because instead of buying an ODrive, I custom-ordered 10 open source motor controllers for ~$44 each which I still have not flashed or tested. Hopefully I can come to my senses and buy the ODrive so I can actually get motors moving on a project, but I would feel guilty if I didn't get one custom driver working.</p>
+            <!--<ul>
                 <li>Design of cycloidal and planetary gearbox mechanisms</li>
                 <li>Prototyping using 3D printing and CNC machining</li>
                 <li>Implementation of speed control for testing</li>
@@ -29,6 +41,7 @@
             </ul>
             <h2>Results and Impact</h2>
             <p>The developed gearboxes offer improved performance and efficiency for robotic systems, particularly in applications requiring high torque in a compact form factor.</p>
+        -->
             <a href="index.html" class="read-more">Back to Portfolio</a>
         </div>
     </div>
