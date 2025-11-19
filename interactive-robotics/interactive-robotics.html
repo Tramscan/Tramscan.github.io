@@ -3,6 +3,7 @@ permalink: /interactive-robotics/
 ---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +12,37 @@ permalink: /interactive-robotics/
     <link rel="stylesheet" href="/shared.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
-        #pendulum-program, #three-body-program {
+        #pendulum-program,
+        #three-body-program {
             width: 600px;
             margin: 20px auto;
             text-align: center;
         }
-        #pendulum-canvas, #three-body-canvas {
+
+        #pendulum-canvas,
+        #three-body-canvas {
             background-color: #333;
             border: none;
             border-radius: 15px;
             margin-bottom: 10px;
         }
+
         .project-controls button {
             margin: 0 5px;
         }
+
         .mass-sliders {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
         }
+
         .mass-slider {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         .home-link {
             position: fixed;
             padding: 10px;
@@ -43,30 +51,33 @@ permalink: /interactive-robotics/
             text-decoration: none;
             border-radius: 5px;
         }
+
         .home-link:hover {
             background-color: #555;
         }
+
         .top-right {
             top: 10px;
             right: 10px;
         }
+
         .bottom-right {
             bottom: 10px;
             right: 10px;
         }
-
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Interactive Robotics Projects</h1>
-        
+
         <!-- Link to Counter Program -->
-        <div class="project-box">
+        <!--<div class="project-box">
             <h2 class="project-title">Counter Program</h2>
             <p><a href="/interactive-robotics/counter/">View Counter Program</a></p>
-        </div>
-        
+        </div>-->
+
         <!-- Pendulum Simulation -->
         <div class="project-box">
             <h2 class="project-title">Double Pendulum Simulation</h2>
@@ -122,4 +133,5 @@ permalink: /interactive-robotics/
         });
     </script>
 </body>
+
 </html>
